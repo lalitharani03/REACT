@@ -1,0 +1,16 @@
+import React,{useState} from "react";
+export default function Message(){
+    const[show,setshow]=useState(false);
+    const toggle=()=>{
+        setshow(!show);
+    }
+    return(
+        <div>
+            <h1>Dashboard</h1>
+            <hr>
+            </hr>
+            <button onClick={toggle}>{show ? "Hide Message":"Show Message"}</button>
+            {show && <p>Hi! How are you!!</p>}
+        </div>
+    );
+}
